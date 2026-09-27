@@ -102,17 +102,18 @@
 <a class="debites-wa" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" aria-label="WhatsApp"><span>☏</span><b>WhatsApp</b></a>
 <script>
 const orderState=[];
-const money=n=>'₦'+n.toLocaleString('en-NG');
+const money=n=>'₦'+Number(n).toLocaleString('en-NG');
 const itemSelect=document.getElementById('orderItem');
 const orderItems=document.getElementById('orderItems');
 const totalEl=document.getElementById('orderTotal');
-const menuItems=[...document.querySelectorAll('.menu-list .item')].map(el=>{
- const name=el.querySelector('h3')?.textContent.trim()||'';
- const priceText=el.querySelector('.price')?.textContent.replace(/[^0-9]/g,'')||'0';
- return {name,price:Number(priceText)};
-}).filter(x=>x.name&&x.price);
-menuItems.forEach((x,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`${x.name} — ${money(x.price)}`;itemSelect.appendChild(o)});
-function renderOrder(){
- orderItems.innerHTML='';
- if(!orderState.length){orderItems.innerHTML='<div class="order-empty">Your order is empty. Add items from the menu above.</div>';}
- orderState.forEach((x,i)=>{const row=document.createElement('div');row.className='order-line';row.innerHTML=`<div><strong>${x.name}</strong><small>${money(x.price)} each</small></div><div class="qty"><button type="button" data-i="${i}" data-act="minus">−</button><span>${x.qty}</span><button type="button" data-i="${i}" data-act="plus">+</button><button type="button" class="remove" data-i="${
+
+// Menu used by Build Your Order
+const menuItems=[
+ ['Self Love',4000],['Smart Box',5000],['Smart Box Max',7000],['De-Bites Premium Box',25000],['Trio Box',13000],['French Fries Combo',6000],
+ ['1 Medium Size Chicken',1000],['1 Chicken',1500],['1 Sizzling Noodles',1400],['1 Fried Eggs',500],['1 Slice of Yam',500],['1 Egg Sauce',700],
+ ['1 Sizzling Noodles & Egg',2200],['1 Sizzling Noodle & 2 Eggs',2900],['2 Sizzling Noodles & 1 Egg',4300],['Pasta & Chicken',3000],['Pasta & Turkey',4200],['Pasta & Beef',2800],['Fried Rice & Chicken',3000],['Jollof Rice & Chicken',3000],['Fried Rice & Turkey',4200],
+ ['Chicken Shawarma — Single Sausage',3500],['Chicken Shawarma + Two Sausage',4000],['Beef Shawarma',3000],['Chicken Wrap',4000],['Mini Chapman',1000],['Big Bottle Chapman',2500],['Table Water',200],['Pepsi',500],['Coke',500],['Sprite',500],['Zobo',1000],['Malt',600],['Nutri Milk',800],
+ ['Mini Cup Parfait',4500],['330ml Parfait',5500],['500ml Parfait',7500]
+].map(([name,price])=>({name,price}));
+
+menuIt
