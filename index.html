@@ -7,132 +7,112 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <div class="container nav">
-    <a class="logo" href="#home">De-Bites<small>N CUISINE</small></a>
-    <button class="menu-toggle" aria-label="Open navigation">☰</button>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
+<div class="bg-orb orb-one"></div><div class="bg-orb orb-two"></div>
+<header><div class="container nav">
+  <a class="logo" href="#home">De-Bites<small>N CUISINE</small></a>
+  <button class="menu-toggle" aria-label="Open navigation">☰</button>
+  <nav><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+</div></header>
 <main>
+<section id="home" class="hero"><div class="container hero-inner">
+  <div class="kicker">Welcome to De-Bites N Cuisine</div>
+  <h1>Good food.<br><span class="gold">Great vibes.</span><br>Always.</h1>
+  <p class="lead">Small chops, parfait, grills and more — made for everyday cravings, special moments and unforgettable events in Ibadan.</p>
+  <div class="cashless mini"><strong>💳 CASHLESS POLICY</strong> — All payments are made into the company account only. After payment, send your proof of payment to our WhatsApp number.</div>
+  <a class="btn" href="#menu">Explore Our Menu ↓</a><a class="btn outline" href="tel:+2348027641601">Call 08027641601</a>
+</div></section>
 
-<section id="home" class="hero">
-  <div class="container hero-inner">
-    <div class="kicker">Welcome to De-Bites N Cuisine</div>
-    <h1>Good food.<br><span class="gold">Great vibes.</span><br>Always.</h1>
-    <p class="lead">Small chops, parfait, grills and more — made for everyday cravings, special moments and unforgettable events in Ibadan.</p>
-    <a class="btn" href="#menu">Explore Our Menu ↓</a>
-    <a class="btn outline" href="tel:+2348027641601">Call 08027641601</a>
-  </div>
-</section>
+<section><div class="container"><div class="section-head"><div class="kicker">Popular Picks</div><h2>New prices. <span class="gold">Easy ordering.</span></h2><p>Scroll naturally through the website — menu, gallery, payment details, contact and location are all here.</p></div>
+<div class="grid">
+ <div class="card reveal"><div class="kicker">Small Chops</div><h3>Smart Box — ₦5,000</h3><p>2 spring rolls, 2 beef samosa, grilled chicken, sausage and 10 puffs.</p><a class="btn" href="#menu">See Menu ↓</a></div>
+ <div class="card reveal"><div class="kicker">Dessert</div><h3>330ml Parfait — ₦5,500</h3><p>New parfait pricing is now reflected on the website.</p><a class="btn" href="#gallery">View Prices ↓</a></div>
+ <div class="card reveal"><div class="kicker">Combo</div><h3>French Fries Combo — ₦6,000</h3><p>1 portion French fries, 2 grilled chicken and 1 ketchup dip.</p><a class="btn" href="#menu">Order ↓</a></div>
+</div><div class="cashless">💳 <strong>CASHLESS ONLY:</strong> Please pay into the official De-Bites N Cuisine company account shown below.</div>
+</div></section>
 
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Popular Picks</div>
-      <h2>Clear prices. <span class="gold">Easy ordering.</span></h2>
-      <p>Scroll through the website naturally — everything is right here on one smooth page.</p>
-    </div>
-    <div class="grid">
-      <div class="card"><div class="kicker">Grills</div><h3>Shawarma — ₦2,800</h3><p>Single sausage option. Double sausage: ₦3,000.</p><a class="btn" href="#menu">See Menu ↓</a></div>
-      <div class="card"><div class="kicker">Dessert</div><h3>Parfait — ₦3,000</h3><p>Medium cup. Large cup: ₦4,000.</p><a class="btn" href="#menu">See Menu ↓</a></div>
-      <div class="card"><div class="kicker">Small Chops</div><h3>Smart Box — ₦4,000</h3><p>Perfect for sharing, events and quick bites.</p><a class="btn" href="#menu">See Menu ↓</a></div>
-    </div>
-  </div>
-</section>
+<section id="menu" class="scroll-section"><div class="container">
+ <div class="page-hero-inner"><div class="kicker">Our Menu</div><h2>New prices, <span class="gold">clearly displayed.</span></h2><p class="lead">Choose an item and tap Order Now to send your order directly on WhatsApp.</p><div class="cashless mini">💳 <strong>PAYMENT:</strong> We are cashless. After paying into the official company account, send your proof of payment to <strong>08027641601 on WhatsApp</strong>.</div></div>
+ <div class="order-builder card" id="order-builder">
+  <div class="kicker">Smart Ordering</div>
+  <h2>Build Your <span class="gold">Order.</span></h2>
+  <p class="lead">Select what you want, choose quantities, then send your complete order to WhatsApp in one message.</p>
+  <div class="order-row"><select id="orderItem" aria-label="Choose a menu item"><option value="">Choose a menu item...</option></select><button type="button" class="btn" id="addItem">Add to Order</button></div>
+  <div id="orderItems" class="order-items"><div class="order-empty">Your order is empty. Add items from the menu above.</div></div>
+  <div class="order-total"><span>Total</span><strong id="orderTotal">₦0</strong></div>
+  <button type="button" class="btn order-submit" id="sendOrder">🟢 Order Now on WhatsApp</button>
+  <p class="order-note">💳 <strong>Cashless only.</strong> After payment into the official company account, send your proof of payment to <strong>08027641601 on WhatsApp</strong>.</p>
+ </div>
+ <div class="section-head menu-heading"><div class="kicker">Small Chops & Combos</div><h2>Made for <span class="gold">every craving.</span></h2></div>
+ <div class="menu-list">
+  <div class="item"><div><h3>Self Love</h3><p>1 Reg Spring Roll, 1 Beef Samosa, 1 Grilled Chicken, 6 Puffs in a box</p></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Self%20Love." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Smart Box</h3><p>2 Reg Spring Rolls, 2 Beef Samosa, 1 Grilled Chicken, 1 Sausage, 10 Puffs in a box</p></div><div><div class="price">₦5,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Smart%20Box." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Smart Box Max</h3><p>2 Reg Spring Rolls, 2 Beef Samosa, 2 Sausage, 1 Grilled Chicken, 15 Puffs in a box</p></div><div><div class="price">₦7,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Smart%20Box%20Max." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>De-Bites Premium Box</h3><p>5 Samosas, 5 Spring Rolls, 1 Big Chapman, 1 Portion Asun, 2 Sausages, 5 Chicken Cuts, 1 Pasta, 1 Shawarma</p></div><div><div class="price">₦25,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20De-Bites%20Premium%20Box." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Trio Box</h3><p>3 Spring Rolls, 3 Samosa, 3 BBQ Chicken Cuts, 8 Puff Puffs, 2 Sausage, 2 Corn Dogs in a mini platter box</p></div><div><div class="price">₦13,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Trio%20Box." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>French Fries Combo</h3><p>1 Portion French Fries, 2 Grilled Chicken, 1 Ketchup Dip</p></div><div><div class="price">₦6,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20French%20Fries%20Combo." target="_blank">Order Now</a></div></div>
+ </div>
+ <div class="section-head menu-heading"><div class="kicker">Foods</div><h2>Meals & <span class="gold">sides.</span></h2></div>
+ <div class="menu-list">
+  <div class="item"><div><h3>1 Medium Size Chicken</h3></div><div><div class="price">₦1,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%201%20Medium%20Size%20Chicken." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Chicken</h3></div><div><div class="price">₦1,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%201%20Chicken." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Sizzling Noodles</h3></div><div><div class="price">₦1,400</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%201%20Sizzling%20Noodles." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Fried Eggs</h3></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%201%20Fried%20Eggs." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Slice of Yam</h3></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%201%20Slice%20of%20Yam." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Egg Sauce</h3></div><div><div class="price">₦700</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%201%20Egg%20Sauce." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Sizzling Noodles & Egg</h3></div><div><div class="price">₦2,200</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Sizzling%20Noodles%20%26%20Egg." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>1 Sizzling Noodle & 2 Eggs</h3></div><div><div class="price">₦2,900</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Sizzling%20Noodle%20%26%202%20Eggs." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>2 Sizzling Noodles & 1 Egg</h3></div><div><div class="price">₦4,300</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%202%20Sizzling%20Noodles%20%26%201%20Egg." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Pasta & Chicken</h3></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Pasta%20%26%20Chicken." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Pasta & Turkey</h3></div><div><div class="price">₦4,200</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Pasta%20%26%20Turkey." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Pasta & Beef</h3></div><div><div class="price">₦2,800</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Pasta%20%26%20Beef." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Fried Rice & Chicken</h3></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Fried%20Rice%20%26%20Chicken." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Jollof Rice & Chicken</h3></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Jollof%20Rice%20%26%20Chicken." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Fried Rice & Turkey</h3></div><div><div class="price">₦4,200</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Fried%20Rice%20%26%20Turkey." target="_blank">Order Now</a></div></div>
+ </div>
+ <div class="section-head menu-heading"><div class="kicker">Shawarma & Drinks</div><h2>Grills, wraps & <span class="gold">refreshments.</span></h2></div>
+ <div class="menu-list">
+  <div class="item"><div><h3>Chicken Shawarma — Single Sausage</h3></div><div><div class="price">₦3,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Chicken%20Shawarma%20Single%20Sausage." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Chicken Shawarma + Two Sausage</h3></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Chicken%20Shawarma%20Two%20Sausage." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Beef Shawarma</h3></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Beef%20Shawarma." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Chicken Wrap</h3></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Chicken%20Wrap." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Mini Chapman</h3></div><div><div class="price">₦1,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Mini%20Chapman." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Big Bottle Chapman</h3></div><div><div class="price">₦2,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Big%20Bottle%20Chapman." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Table Water</h3></div><div><div class="price">₦200</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Table%20Water." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Pepsi</h3></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Pepsi." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Coke</h3></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Coke." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Sprite</h3></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Sprite." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Zobo</h3></div><div><div class="price">₦1,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Zobo." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Malt</h3></div><div><div class="price">₦600</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Malt." target="_blank">Order Now</a></div></div>
+  <div class="item"><div><h3>Nutri Milk</h3></div><div><div class="price">₦800</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%20want%20to%20order%20Nutri%20Milk." target="_blank">Order Now</a></div></div>
+ </div>
+ <div class="cashless payment-strip"><div><div class="kicker">Payment Policy</div><h2>💳 CASHLESS <span class="gold">ONLY</span></h2><p>All payments must be made into the official De-Bites N Cuisine company account only. No cash payments. After payment, send your proof of payment to <strong>08027641601 on WhatsApp</strong> so we can confirm your order.</p></div><div class="account"><strong>MONIEPOINT</strong><span>Account Name: De-Bites N Cuisine</span><b>5794051402</b></div></div>
+</div></section>
 
-<section id="menu" class="scroll-section">
-  <div class="container">
-    <div class="page-hero-inner">
-      <div class="kicker">Our Menu</div>
-      <h2>Every price is <span class="gold">clear.</span></h2>
-      <p class="lead">Browse the full menu, see every price clearly, and order any item directly on WhatsApp.</p>
-    </div>
-    <div class="section-head menu-heading">
-      <div class="kicker">Menu & Prices</div>
-      <h2>Choose your <span class="gold">favourite.</span></h2>
-    </div>
-    <div class="item"><div><h3>Self Love</h3><p>1 Reg Spring Roll, 1 Beef Samosa, 1 Peppered Chicken, 6 Puffs</p></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Self%20Love" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Smart Box</h3><p>2 Reg Spring Rolls, 2 Beef Samosa, 1 Peppered Chicken, 1 Sausage, 10 Puffs</p></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Smart%20Box" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Smart Box Max</h3><p>2 Reg Spring Rolls, 2 Beef Samosa, 2 Sausage, 1 Peppered Chicken, 12 Puffs</p></div><div><div class="price">₦5,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Smart%20Box%20Max" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Sizzling Noodles</h3><p>1 portion</p></div><div><div class="price">₦800</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Sizzling%20Noodles" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Sizzling Noodles & 2 Eggs</h3><p>Noodles with two eggs</p></div><div><div class="price">₦1,700</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Sizzling%20Noodles%20&%202%20Eggs" target="_blank">Order Now</a></div></div><div class="item"><div><h3>2 Sizzling Noodles & 2 Eggs</h3><p>Two portions of noodles with two eggs</p></div><div><div class="price">₦2,400</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%202%20Sizzling%20Noodles%20&%202%20Eggs" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Pasta & Chicken</h3><p>Rich pasta with chicken</p></div><div><div class="price">₦2,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Pasta%20&%20Chicken" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Pasta & Turkey Cut</h3><p>Pasta with turkey cut</p></div><div><div class="price">₦3,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Pasta%20&%20Turkey%20Cut" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Pasta & Full Turkey</h3><p>Pasta with full turkey</p></div><div><div class="price">₦5,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Pasta%20&%20Full%20Turkey" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Fried Rice & Chicken</h3><p>Fried rice with chicken</p></div><div><div class="price">₦2,800</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Fried%20Rice%20&%20Chicken" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Fried Rice & Turkey</h3><p>Fried rice with turkey</p></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Fried%20Rice%20&%20Turkey" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Peppered Beef</h3><p>1 plate</p></div><div><div class="price">₦1,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Peppered%20Beef" target="_blank">Order Now</a></div></div><div class="item"><div><h3>24pcs Samosa</h3><p>24 pieces</p></div><div><div class="price">₦6,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%2024pcs%20Samosa" target="_blank">Order Now</a></div></div><div class="item"><div><h3>BBQ Chicken + Fries</h3><p>Chicken cut, fries & ketchup dip</p></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20BBQ%20Chicken%20+%20Fries" target="_blank">Order Now</a></div></div><div class="item"><div><h3>The Baller Box</h3><p>Turkey cut, fries & ketchup dip</p></div><div><div class="price">₦5,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20The%20Baller%20Box" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Shawarma — Single Sausage</h3><p>Fresh shawarma with single sausage</p></div><div><div class="price">₦2,800</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Shawarma%20—%20Single%20Sausage" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Shawarma — Double Sausage</h3><p>Fresh shawarma with double sausage</p></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Shawarma%20—%20Double%20Sausage" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Medium Parfait</h3><p>Layered creamy fruit parfait</p></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Medium%20Parfait" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Large Cup Parfait</h3><p>Large layered fruit parfait</p></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Large%20Cup%20Parfait" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Chapman</h3><p>Classic chilled Chapman</p></div><div><div class="price">₦1,700</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Chapman" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Chicken Cut</h3><p>Extra chicken cut</p></div><div><div class="price">₦1,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Chicken%20Cut" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Full Chicken</h3><p>Full chicken</p></div><div><div class="price">₦3,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Full%20Chicken" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Corn on Hob</h3><p>Corn on the cob</p></div><div><div class="price">₦800</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Corn%20on%20Hob" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Corn in Mayo</h3><p>Corn with mayo</p></div><div><div class="price">₦1,500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Corn%20in%20Mayo" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Turkey</h3><p>Turkey portion</p></div><div><div class="price">₦4,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Turkey" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Turkey Cut</h3><p>Turkey cut</p></div><div><div class="price">₦2,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Turkey%20Cut" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Peppered Beef Extra</h3><p>Extra peppered beef</p></div><div><div class="price">₦2,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Peppered%20Beef%20Extra" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Beef</h3><p>Beef portion</p></div><div><div class="price">₦1,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Beef" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Fries</h3><p>Crispy fries</p></div><div><div class="price">₦2,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Fries" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Sausage</h3><p>Single sausage</p></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Sausage" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Salad</h3><p>Salad</p></div><div><div class="price">₦500</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Salad" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Springrolls</h3><p>Single spring roll</p></div><div><div class="price">₦250</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Springrolls" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Samosa</h3><p>Single samosa</p></div><div><div class="price">₦250</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Samosa" target="_blank">Order Now</a></div></div><div class="item"><div><h3>Ram</h3><p>Ram portion</p></div><div><div class="price">₦2,000</div><a class="order" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine,%20I%27d%20like%20to%20place%20an%20order%20for%20Ram" target="_blank">Order Now</a></div></div>
-  </div>
-</section>
+<section id="about" class="scroll-section"><div class="container split"><div><div class="kicker">About De-Bites</div><h2>Good food.<br><span class="gold">Great vibes.</span></h2><p class="lead">A modern food spot for small chops, parfait, grills, shawarma and events in Ibadan.</p><p>De-Bites N Cuisine serves tasty meals, snacks and event catering with delivery and pickup options.</p><div class="cashless mini">💳 <strong>CASHLESS POLICY:</strong> Payments are made into the company account only. After payment, send your proof of payment to <strong>08027641601 on WhatsApp</strong>.</div></div><div class="card"><h3 class="gold">What we offer</h3><div class="info-list"><div class="info">Small chops & snacks</div><div class="info">Grills & shawarma</div><div class="info">Parfait & drinks</div><div class="info">Delivery & pickup</div><div class="info">Indoor & outdoor events</div></div></div></div></section>
 
-<section id="about" class="scroll-section">
-  <div class="container split">
-    <div>
-      <div class="kicker">About De-Bites</div>
-      <h2>Good food.<br><span class="gold">Great vibes.</span></h2>
-      <p class="lead">A modern food spot for small chops, parfait, grills, shawarma and events in Ibadan.</p>
-      <p>De-Bites N Cuisine serves tasty meals, snacks and event catering with delivery and pickup options.</p>
-    </div>
-    <div class="card">
-      <h3 class="gold">What we offer</h3>
-      <div class="info-list">
-        <div class="info">Small chops & snacks</div>
-        <div class="info">Grills & shawarma</div>
-        <div class="info">Parfait & drinks</div>
-        <div class="info">Delivery & pickup</div>
-        <div class="info">Indoor & outdoor events</div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="gallery" class="scroll-section"><div class="container"><div class="section-head"><div class="kicker">Gallery</div><h2>A taste of <span class="gold">De-Bites.</span></h2><p>The latest price-list flyers are displayed here so customers can see the current offers and prices.</p></div><div class="gallery-grid">
+ <div class="gallery-card"><img src="assets/price-list.jpg" alt="De-Bites current food price list"><div class="gallery-caption"><h3>Current Food Price List</h3><p>Small chops, combos, meals, shawarma and drinks.</p></div></div>
+ <div class="gallery-card"><img src="assets/parfait-new-prices.jpg" alt="De-Bites new parfait prices"><div class="gallery-caption"><h3>New Parfait Prices</h3><p>Mini cup ₦4,500 · 330ml ₦5,500 · 500ml ₦7,500.</p></div></div>
+ <div class="gallery-card"><img src="assets/de-bites-food-menu.png" alt="De-Bites food menu"><div class="gallery-caption"><h3>Food Inspiration</h3><p>Explore the De-Bites menu and discover your next order.</p></div></div>
+ </div><div class="cashless">💳 <strong>REMINDER:</strong> De-Bites operates a cashless payment policy. Pay into the official company account only, then send your proof of payment to <strong>08027641601 on WhatsApp</strong>.</div></div></section>
 
-<section id="gallery" class="scroll-section">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Gallery</div>
-      <h2>A taste of <span class="gold">De-Bites.</span></h2>
-      <p>Food and event inspiration from our menu.</p>
-    </div>
-    <div class="grid">
-      <div class="card"><img class="gallery-img" src="assets/de-bites-food-menu.png" alt="De-Bites food menu"><h3>Our Menu</h3><p>Explore our food selection.</p></div>
-      <div class="card"><img class="gallery-img" src="assets/de-bites-food-menu.png" alt="De-Bites catering"><h3>Catering & Events</h3><p>Food for birthdays, weddings, corporate events and private gatherings.</p></div>
-      <div class="card"><img class="gallery-img" src="assets/de-bites-food-menu.png" alt="De-Bites meals"><h3>Fresh Favourites</h3><p>Small chops, grills, shawarma, parfait and more.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="scroll-section">
-  <div class="container split">
-    <div class="info-list">
-      <div>
-        <div class="kicker">Contact</div>
-        <h2>Let's get your <span class="gold">order started.</span></h2>
-      </div>
-      <div class="info"><div class="kicker">Phone</div><h3>08027641601</h3><a class="btn" href="tel:+2348027641601">Call Now</a></div>
-      <div class="info"><div class="kicker">WhatsApp</div><h3>Chat with De-Bites</h3><a class="btn" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank">Open WhatsApp</a></div>
-      <div class="info"><div class="kicker">Opening Hours</div><h3>Mon–Sat · 8:00 AM–8:00 PM</h3></div>
-      <div class="info"><div class="kicker">Address</div><h3>BATI'S PLAZA, 42 Kenneth Dike Rd, Bodija, beside GTB, Ibadan, Oyo State</h3></div>
-    </div>
-    <iframe class="map" src="https://www.google.com/maps?q=BATI'S%20PLAZA%2C%2042%20Kenneth%20Dike%20Rd%2C%20Bodija%2C%20Ibadan&output=embed" loading="lazy"></iframe>
-  </div>
-</section>
-
+<section id="contact" class="scroll-section"><div class="container split"><div class="info-list"><div><div class="kicker">Contact</div><h2>Let's get your <span class="gold">order started.</span></h2></div><div class="info"><div class="kicker">Phone</div><h3>08027641601</h3><a class="btn" href="tel:+2348027641601">Call Now</a></div><div class="info"><div class="kicker">WhatsApp</div><h3>Chat with De-Bites</h3><a class="btn" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank">Open WhatsApp</a></div><div class="info"><div class="kicker">Opening Hours</div><h3>Mon–Sat · 8:00 AM–8:00 PM</h3></div><div class="info"><div class="kicker">Address</div><h3>BATI'S PLAZA, 42 Kenneth Dike Rd, Bodija, beside GTB, Ibadan, Oyo State</h3></div><div class="info payment-mini"><div class="kicker">💳 Payment</div><h3>CASHLESS ONLY</h3><p>Moniepoint · De-Bites N Cuisine · <strong>5794051402</strong></p><p>No cash payments.</p><p><strong>After payment, send your proof of payment to 08027641601 on WhatsApp.</strong></p></div></div><iframe class="map" src="https://www.google.com/maps?q=BATI'S%20PLAZA%2C%2042%20Kenneth%20Dike%20Rd%2C%20Bodija%2C%20Ibadan&output=embed" loading="lazy"></iframe></div></section>
 </main>
-
-<footer>
-  <div class="container">
-    <b class="gold">DE-BITES N CUISINE</b>
-    <p>Good Food. Great Vibes. Always.</p>
-    <p>BATI'S PLAZA, 42 Kenneth Dike Rd, Bodija, Ibadan · Mon–Sat 8:00 AM–8:00 PM</p>
-    <p>08027641601 · @de_bitesncuisine</p>
-    <p>© 2026 De-Bites N Cuisine</p>
-  </div>
-</footer>
-
+<footer><div class="container"><b class="gold">DE-BITES N CUISINE</b><p>Good Food. Great Vibes. Always.</p><p>BATI'S PLAZA, 42 Kenneth Dike Rd, Bodija, Ibadan · Mon–Sat 8:00 AM–8:00 PM</p><p>08027641601 · @de_bitesncuisine</p><div class="cashless footer-cashless">💳 CASHLESS ONLY — Pay into Moniepoint account <strong>5794051402</strong> (De-Bites N Cuisine).</div><p>© 2026 De-Bites N Cuisine</p></div></footer>
 <a class="debites-wa" href="https://wa.me/2348027641601?text=Hello%20De-Bites%20N%20Cuisine%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" aria-label="WhatsApp"><span>☏</span><b>WhatsApp</b></a>
-
 <script>
-document.querySelector('.menu-toggle').onclick=()=>document.querySelector('nav').classList.toggle('open');
-document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>document.querySelector('nav').classList.remove('open'));
-</script>
-</body>
-</html>
+const orderState=[];
+const money=n=>'₦'+n.toLocaleString('en-NG');
+const itemSelect=document.getElementById('orderItem');
+const orderItems=document.getElementById('orderItems');
+const totalEl=document.getElementById('orderTotal');
+const menuItems=[...document.querySelectorAll('.menu-list .item')].map(el=>{
+ const name=el.querySelector('h3')?.textContent.trim()||'';
+ const priceText=el.querySelector('.price')?.textContent.replace(/[^0-9]/g,'')||'0';
+ return {name,price:Number(priceText)};
+}).filter(x=>x.name&&x.price);
+menuItems.forEach((x,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`${x.name} — ${money(x.price)}`;itemSelect.appendChild(o)});
+function renderOrder(){
+ orderItems.innerHTML='';
+ if(!orderState.length){orderItems.innerHTML='<div class="order-empty">Your order is empty. Add items from the menu above.</div>';}
+ orderState.forEach((x,i)=>{const row=document.createElement('div');row.className='order-line';row.innerHTML=`<div><strong>${x.name}</strong><small>${money(x.price)} each</small></div><div class="qty"><button type="button" data-i="${i}" data-act="minus">−</button><span>${x.qty}</span><button type="button" data-i="${i}" data-act="plus">+</button><button type="button" class="remove" data-i="${
